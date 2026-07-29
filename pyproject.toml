@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mnist-autoencoder-lab"
+version = "1.0.0"
+description = "Train, evaluate, and explore convolutional autoencoders on MNIST"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.2,<3", "torchvision>=0.17,<1", "numpy>=1.26,<3", "matplotlib>=3.8,<4"]
+
+[project.scripts]
+autoencoder-lab = "autoencoder_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
